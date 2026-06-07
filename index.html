@@ -1,0 +1,190 @@
+<DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المستشار البيئي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🌿 المستشار البيئي</div>
+    </header>
+
+    <main>
+        <section class="slider-section">
+            <div class="slider-container">
+                
+                <div class="slide active">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <h1>مرحبًا بك في المستشار البيئي</h1>
+                            <p>دليلك السريع لتبني أسلوب حياة مستدام والحفاظ على بيئتنا بطرق بسيطة وذكية.</p>
+                        </div>
+                        <div class="slide-media">
+                            <video controls>
+                                <source src="video.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <h1>بطاقة الإلهام البيئي 🌱</h1>
+                            <p>كل خطوة صغيرة تصنع فارقاً كبيراً في مستقبل كوكبنا الأخضر.</p>
+                        </div>
+                        <div class="slide-media">
+                            <img src="slider-img.jpeg" alt="طبيعة">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-dots">
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="filter-section">
+            <div class="filter-bar">
+                <button class="filter-btn active" onclick="filterCategory('all')">كل المواد</button>
+                <button class="filter-btn" onclick="filterCategory('kitchen')">مطبخ ونفايات 🍎</button>
+                <button class="filter-btn" onclick="filterCategory('tech')">أجهزة وإلكترونيات 💻</button>
+            </div>
+        </section>
+
+        <section class="accordion-section">
+            <div class="accordion-container">
+                
+                <div class="accordion-item kitchen">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>علب البلاستيك</span>
+                        <span class="arrow">🔽</span>
+                    </button>
+                    <div class="accordion-panel">
+                        <p class="wrong-action"><strong>التصرف الخاطئ ❌:</strong> رميها مباشرة في النفايات العامة وهدر إمكانية الاستفادة منها.</p>
+                        <div class="correct-action">
+                            <strong>البديل البيئي الأفضل 🌱:</strong>
+                            <ul class="eco-list">
+                                <li>غسل العلب وإعادة استخدامها للتخزين المنزلي.</li>
+                                <li>فرزها ووضعها في حاويات التدوير الصفراء المخصصة.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item kitchen">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>بقايا الطعام</span>
+                        <span class="arrow">🔽</span>
+                    </button>
+                    <div class="accordion-panel">
+                        <p class="wrong-action"><strong>التصرف الخاطئ ❌:</strong> التخلص منها في سلة المهملات مما يسبب انبعاث غازات ضارة عند تحللها.</p>
+                        <div class="correct-action">
+                            <strong>البديل البيئي الأفضل 🌱:</strong>
+                            <ul class="eco-list">
+                                <li>تحويلها إلى سماد طبيعي غني للنباتات (التسميد المنزلي).</li>
+                                <li>تخطيط الوجبات العائلية بدقة لتقليل الهدر من البداية.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item kitchen">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>زيوت الطبخ المستخدمة</span>
+                        <span class="arrow">🔽</span>
+                    </button>
+                    <div class="accordion-panel">
+                        <p class="wrong-action"><strong>التصرف الخاطئ ❌:</strong> سكبها في مجاري الصرف الصحي مما يتسبب في انسداد الشبكات وتلوث المياه.</p>
+                        <div class="correct-action">
+                            <strong>البديل البيئي الأفضل 🌱:</strong>
+                            <ul class="eco-list">
+                                <li>تجميعها في عبوة بلاستيكية أو زجاجية مغلقة بإحكام.</li>
+                                <li>تسليمها للمبادرات المحلية لإعادة تدويرها إلى وقود حيوي.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item tech">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>اللمبات القديمة</span>
+                        <span class="arrow">🔽</span>
+                    </button>
+                    <div class="accordion-panel">
+                        <p class="wrong-action"><strong>التصرف الخاطئ ❌:</strong> رميها مع النفايات العادية حيث تتهشم وتتسرب منها غازات ضارة.</p>
+                        <div class="correct-action">
+                            <strong>البديل البيئي الأفضل 🌱:</strong>
+                            <ul class="eco-list">
+                                <li>استبدالها بلمبات LED الموفرة للطاقة بشكل كامل في غرفتك والمنزل.</li>
+                                <li>تجميع المصابيح القديمة التالفة لتسليمها لنقاط التدوير الإلكتروني بأمان.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item tech">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>البطاريات المستعملة</span>
+                        <span class="arrow">🔽</span>
+                    </button>
+                    <div class="accordion-panel">
+                        <p class="wrong-action"><strong>التصرف الخاطئ ❌:</strong> إلقاؤها في القمامة العادية، مما يؤدي لتسرب أحماض ومعادن ثقيلة وسامة للتربة.</p>
+                        <div class="correct-action">
+                            <strong>البديل البيئي الأفضل 🌱:</strong>
+                            <ul class="eco-list">
+                                <li>تجميعها في صندوق صغير مخصص لها داخل غرفتك.</li>
+                                <li>أخذها ونشرها in حاويات تجميع البطاريات الموجودة في الأسواق الكبرى بجدة.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item tech">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>الشواحن والأسلاك التالفة</span>
+                        <span class="arrow">🔽</span>
+                    </button>
+                    <div class="accordion-panel">
+                        <p class="wrong-action"><strong>التصرف الخاطئ ❌:</strong> التخلص منها في النفايات العامة أو تكديسها في الأدراج بلا أي فائدة.</p>
+                        <div class="correct-action">
+                            <strong>البديل البيئي الأفضل 🌱:</strong>
+                            <ul class="eco-list">
+                                <li>تسليمها للمراكز المتخصصة في تدوير النفايات الإلكترونية.</li>
+                                <li>إتاحة الفرصة لاستخلاص النحاس والمعادن القيمة منها بأمان تام.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>تواصل معنا: <a href="mailto:environmentalconsultant@gmail.com" class="footer-email">environmentalconsultant@gmail.com</a></p>
+                <p class="footer-location">📍 جدة، المملكة العربية السعودية</p>
+            </div>
+            
+            <div class="faq-section">
+                <button id="faqToggleBtn" class="faq-btn">❓ أشهر الأسئلة والأجوبة</button>
+                <div id="faqContent" class="faq-content hidden">
+                    <div class="faq-item">
+                        <h4>هل إعادة التدوير متوفرة في جدة؟</h4>
+                        <p>نعم، تتوفر حالياً العديد من الحاويات الذكية ومراكز تجميع المواد القابلة للتدوير في مختلف أحياء جدة لفرز النفايات.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
